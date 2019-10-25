@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <algorithm>
@@ -10,7 +11,7 @@ int main(){
 ifstream arquivo;
 
 int num;
-int qtd; 
+int frequencia; 
 
  
 vector<int>vetor;
@@ -29,9 +30,9 @@ sort(vetor.begin(),vetor.end());
 cout<<vetor[0]<<endl;
 cout<<vetor[vetor.size()-1]<<endl;
 
-for(auto elemento : vetor){
-qtd = count(vetor.begin(),vetor.end(),elemento);
-cout<<"O número "<<elemento<<" aparece "<<qtd<<" vezes!"<<endl;
+for(int i=0;i<=vetor[vetor.size()-1];i++){
+    frequencia=count(vetor.begin(),vetor.end(),i);
+    cout<<"O número "<<i<<" aparece "<<frequencia<<" vezes!"<<endl;
 }
 
 
